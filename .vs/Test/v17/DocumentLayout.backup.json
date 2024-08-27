@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "D:\\Projects\\Test\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{94781835-24F5-495E-AE0F-A49E96640C70}|Test.csproj|d:\\projects\\test\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{94781835-24F5-495E-AE0F-A49E96640C70}|Test.csproj|solutionrelative:customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{94781835-24F5-495E-AE0F-A49E96640C70}|Test.csproj|d:\\projects\\test\\leaderboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{94781835-24F5-495E-AE0F-A49E96640C70}|Test.csproj|solutionrelative:leaderboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{94781835-24F5-495E-AE0F-A49E96640C70}|Test.csproj|d:\\projects\\test\\controllers\\testcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{94781835-24F5-495E-AE0F-A49E96640C70}|Test.csproj|solutionrelative:controllers\\testcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{94781835-24F5-495E-AE0F-A49E96640C70}|Test.csproj|d:\\projects\\test\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94781835-24F5-495E-AE0F-A49E96640C70}|Test.csproj|solutionrelative:customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{94781835-24F5-495E-AE0F-A49E96640C70}|Test.csproj|d:\\projects\\test\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{94781835-24F5-495E-AE0F-A49E96640C70}|Test.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94781835-24F5-495E-AE0F-A49E96640C70}|Test.csproj|d:\\projects\\test\\leaderboardcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94781835-24F5-495E-AE0F-A49E96640C70}|Test.csproj|solutionrelative:leaderboardcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{94781835-24F5-495E-AE0F-A49E96640C70}|Test.csproj|d:\\projects\\test\\test.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
@@ -30,59 +30,56 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Leaderboard.cs",
-              "DocumentMoniker": "D:\\Projects\\Test\\Leaderboard.cs",
-              "RelativeDocumentMoniker": "Leaderboard.cs",
-              "ToolTip": "D:\\Projects\\Test\\Leaderboard.cs",
-              "RelativeToolTip": "Leaderboard.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAcAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "LeaderboardCustomer.cs",
+              "DocumentMoniker": "D:\\Projects\\Test\\LeaderboardCustomer.cs",
+              "RelativeDocumentMoniker": "LeaderboardCustomer.cs",
+              "ToolTip": "D:\\Projects\\Test\\LeaderboardCustomer.cs",
+              "RelativeToolTip": "LeaderboardCustomer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-27T13:15:39.138Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-27T13:15:39.138Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Customer.cs",
+              "DocumentMoniker": "D:\\Projects\\Test\\Customer.cs",
+              "RelativeDocumentMoniker": "Customer.cs",
+              "ToolTip": "D:\\Projects\\Test\\Customer.cs",
+              "RelativeToolTip": "Customer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKAAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-27T10:48:59.563Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Customer.cs",
-              "DocumentMoniker": "D:\\Projects\\Test\\Customer.cs",
-              "RelativeDocumentMoniker": "Customer.cs",
-              "ToolTip": "D:\\Projects\\Test\\Customer.cs*",
-              "RelativeToolTip": "Customer.cs*",
-              "ViewState": "AgIAAJkAAAAAAAAAAAAAAKQAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-27T10:48:59.563Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "TestController.cs",
               "DocumentMoniker": "D:\\Projects\\Test\\Controllers\\TestController.cs",
               "RelativeDocumentMoniker": "Controllers\\TestController.cs",
               "ToolTip": "D:\\Projects\\Test\\Controllers\\TestController.cs",
               "RelativeToolTip": "Controllers\\TestController.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABoAAAA0AAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-27T08:41:37.355Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Projects\\Test\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "D:\\Projects\\Test\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvx4AAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-27T08:29:14.262Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-27T08:29:14.262Z"
             },
             {
               "$type": "Document",
@@ -93,8 +90,7 @@
               "ToolTip": "D:\\Projects\\Test\\Test.csproj",
               "RelativeToolTip": "Test.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-08-27T08:21:40.407Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-27T08:21:40.407Z"
             }
           ]
         }

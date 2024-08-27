@@ -15,7 +15,6 @@ namespace Test.Controllers
             var customer = Customer.Instance;
             var newScore = customer.UpdateCustomerScore(customerid, score);
 
-            // 返回更新后的分数  
             return Ok(JsonSerializer.Serialize(new { CustomerId = customerid, Score = newScore }));
         }
 
@@ -25,8 +24,7 @@ namespace Test.Controllers
         {
             var customer = Customer.Instance;
             var result = customer.GetCustomersByRank(start,end);
-
-            // 返回结果  
+              
             return Ok(JsonSerializer.Serialize(result));
         }
 
@@ -36,6 +34,7 @@ namespace Test.Controllers
         {
             var customer = Customer.Instance;
             var result = customer.GetCustomerWithNeighborsById(customerid, high, low);
+
             return Ok(JsonSerializer.Serialize(result));
         }
     }

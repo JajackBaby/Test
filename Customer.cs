@@ -40,7 +40,7 @@ namespace Test
             new KeyValuePair<long, decimal>(38819, 92),
          };
 
-        // 更新客户分数  
+        
         public decimal UpdateCustomerScore(long customerId, decimal scoreDelta)
         {
             if (scoreDelta < -1000 || scoreDelta > 1000)
@@ -50,7 +50,6 @@ namespace Test
 
             decimal newScore = _scores.AddOrUpdate(customerId, scoreDelta, (id, oldScore) => oldScore + scoreDelta);
 
-            // 清除缓存，因为排行榜可能已更改  
             _cacheLock.EnterWriteLock();
             try
             {
@@ -64,28 +63,28 @@ namespace Test
             return newScore;
         }
 
-        // 获取排行榜 
-        public List<LeaderboardCustomer> GetLeaderboard()
-        {
-            _cacheLock.EnterReadLock();
-            try
-            {
-                if (_isCacheValid)
-                {
-                    // 返回缓存的排行榜（如果可用且最新）  
-                    return _cachedLeaderboard;
-                }
-            }
-            finally
-            {
-                _cacheLock.ExitReadLock();
-            }
+        
+        //public List<LeaderboardCustomer> GetLeaderboard()
+        //{
+        //    _cacheLock.EnterReadLock();
+        //    try
+        //    {
+        //        if (_isCacheValid)
+        //        {
+        //            // 返回缓存的排行榜（如果可用且最新）  
+        //            return _cachedLeaderboard;
+        //        }
+        //    }
+        //    finally
+        //    {
+        //        _cacheLock.ExitReadLock();
+        //    }
 
-            return updateCachedLeaderboard(); 
+        //    return updateCachedLeaderboard(); 
 
-        }
+        //}
 
-        // 按排名获取客户  
+        
         public List<LeaderboardCustomer> GetCustomersByRank(int start, int end)
         {
             if (start < 1 || end < start)
@@ -97,8 +96,7 @@ namespace Test
             try
             {
                 if (_isCacheValid)
-                {
-                    // 返回缓存的排行榜（如果可用且最新）  
+                { 
                     return _cachedLeaderboard.Skip(start - 1) 
                                              .Take(end - start + 1) 
                                              .ToList(); 
@@ -114,7 +112,6 @@ namespace Test
                                             .ToList();
         }
 
-        // 按客户ID获取客户及其邻近客户  
         public List<LeaderboardCustomer> GetCustomerWithNeighborsById(long customerId, int high = 0, int low = 0)
         {
             if (high < 0 || low < 0)
@@ -132,7 +129,6 @@ namespace Test
                 if (_isCacheValid)
                 {
                     var _customer= _cachedLeaderboard.FirstOrDefault(pair => pair.CustomerId == customerId);
-                    // 找到客户及其邻近客户  
                     var _startIndex = Math.Max(0, _customer.Rank - high - 1);
                     var _endIndex = Math.Min(_cachedLeaderboard.Count - 1, _customer.Rank + low - 1); 
 
@@ -146,7 +142,6 @@ namespace Test
             var leaderboard = updateCachedLeaderboard();
 
             var customer = leaderboard.FirstOrDefault(pair => pair.CustomerId == customerId);
-            // 找到客户及其邻近客户  
             var startIndex = Math.Max(0, customer.Rank - high - 1);
             var endIndex = Math.Min(leaderboard.Count - 1, customer.Rank + low - 1);
 
@@ -156,7 +151,6 @@ namespace Test
 
         private List<LeaderboardCustomer> updateCachedLeaderboard()
         {
-            // 缓存不可用或过时，重新计算排行榜  
             var sortedScores = _scores
                 .Where(score => score.Value > 0)
                 .OrderByDescending(pair => pair.Value)
@@ -164,7 +158,7 @@ namespace Test
                 .Select((pair, index) => new LeaderboardCustomer { CustomerId = pair.Key, Score = pair.Value, Rank = index + 1 })
                 .ToList();
 
-            // 更新缓存  
+            
             _cacheLock.EnterWriteLock();
             try
             {
