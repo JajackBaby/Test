@@ -1,0 +1,70 @@
+[
+  {
+    "ContainingType": "Test.Controllers.TestController",
+    "Method": "UpdateCustomerScore",
+    "RelativePath": "customer/{customerid}/score/{score}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "customerid",
+        "Type": "System.Int64",
+        "IsRequired": true
+      },
+      {
+        "Name": "score",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Test.Controllers.TestController",
+    "Method": "GetCustomersByRank",
+    "RelativePath": "leaderboard",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "start",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "end",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Test.Controllers.TestController",
+    "Method": "GetCustomerWithNeighborsById",
+    "RelativePath": "leaderboard/{customerid}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "customerid",
+        "Type": "System.Int64",
+        "IsRequired": true
+      },
+      {
+        "Name": "high",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "low",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
